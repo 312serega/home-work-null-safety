@@ -10,10 +10,10 @@ void main() {
   // part-2
 
   print('Ввседите число A');
-  var a = int.parse(stdin.readLineSync()!);
+  var a = 7;
 
   print('Ввседите число B');
-  var b = int.parse(stdin.readLineSync()!);
+  var b;
 
   print(total(a, b));
 
@@ -28,6 +28,8 @@ String stringInput(val) {
   }
 }
 
-total([int a = 1, int b = 1]) {
-  return a + b;
+total([int? a, int? b]) {
+  var c = a ?? 1;
+  var d = b ?? 2;
+  return c + d;
 }
